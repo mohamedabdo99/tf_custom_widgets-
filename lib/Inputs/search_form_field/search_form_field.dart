@@ -24,7 +24,7 @@ class _SearchFormFieldState extends State<SearchFormField> {
   final TextEditingController _searchController = TextEditingController();
   final FocusNode _focusNode = FocusNode();
 
-  final double _collapsedSearchFieldWidth = 124;
+  final double _collapsedSearchFieldWidth = 125;
   late double _expandSearchFieldWidth;
   bool _isSearchFieldExpand = false;
   final _keyboardVisibilityController = KeyboardVisibilityController();
@@ -65,7 +65,7 @@ class _SearchFormFieldState extends State<SearchFormField> {
     return AnimatedContainer(
       duration: Duration(milliseconds: 400),
       width: _isSearchFieldExpand ? _expandSearchFieldWidth : _collapsedSearchFieldWidth,
-      height: _isSearchFieldExpand ? 32.h : 28.h,
+      height: _isSearchFieldExpand ? 32 : 28,
       padding: EdgeInsets.zero,
       child: TextField(
         focusNode: _focusNode,
@@ -81,7 +81,7 @@ class _SearchFormFieldState extends State<SearchFormField> {
             fillColor: Color(0xFFF7F7F7),
             filled: true,
             hintStyle: TextStyle(
-                fontSize: 12.sp,
+                fontSize: 12,
                 color: Color.fromRGBO(151, 151, 151, 1),
                 fontWeight: FontWeight.w400),
             prefixIcon: InkWell(
