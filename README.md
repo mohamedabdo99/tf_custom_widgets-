@@ -1,5 +1,10 @@
 # tf_tf_custom_widgets
 
+An amendment was made by me to the main package 
+And this is its link 
+
+https://gitlab.com/tarekfouda/tf_custom_widgets // 
+
 custom widget for personal use
 
 ## Getting Started
