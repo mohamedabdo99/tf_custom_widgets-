@@ -35,34 +35,34 @@ class DropdownTextField<T> extends StatelessWidget {
 
   const DropdownTextField(
       {Key? key,
-        this.label,
-        this.hint,
-        this.margin,
-        required this.validate,
-        required this.title,
-        this.contentPadding,
-        this.prefixIcon,
-        this.clearBtnPadding,
-        this.arrowBtnPadding,
-        this.useName = true,
-        this.showClearButton = true,
-        this.searchHint,
-        required this.itemAsString,
-        this.onChange,
-        this.fontSize,
-        this.textSize,
-        this.labelSize,
-        this.hintColor,
-        this.fillColor,
-        this.buttonsColor,
-        this.itemBuilder,
-        this.onFind,
-        this.dropKey,
-        this.data,
-        this.enableColor,
-        this.selectedItem,
-        this.radius,
-        this.showSelectedItem = false})
+      this.label,
+      this.hint,
+      this.margin,
+      required this.validate,
+      required this.title,
+      this.contentPadding,
+      this.prefixIcon,
+      this.clearBtnPadding,
+      this.arrowBtnPadding,
+      this.useName = true,
+      this.showClearButton = true,
+      this.searchHint,
+      required this.itemAsString,
+      this.onChange,
+      this.fontSize,
+      this.textSize,
+      this.labelSize,
+      this.hintColor,
+      this.fillColor,
+      this.buttonsColor,
+      this.itemBuilder,
+      this.onFind,
+      this.dropKey,
+      this.data,
+      this.enableColor,
+      this.selectedItem,
+      this.radius,
+      this.showSelectedItem = false})
       : super(key: key);
 
   @override
@@ -73,7 +73,7 @@ class DropdownTextField<T> extends StatelessWidget {
       isFilteredOnline: false,
       maxHeight: 350,
       label: label,
-      items: data,
+      // items: data,
       onFind: onFind,
       validator: validate,
       onChanged: onChange,
@@ -81,32 +81,26 @@ class DropdownTextField<T> extends StatelessWidget {
       showClearButton: showClearButton,
       popupItemBuilder: itemBuilder,
       clearButton: Padding(
-        padding: clearBtnPadding ??
-            const EdgeInsets.symmetric(horizontal: 5),
-        child: Icon(Icons.clear,
-            size: 20, color: buttonsColor ?? Colors.black),
+        padding: clearBtnPadding ?? const EdgeInsets.symmetric(horizontal: 5),
+        child: Icon(Icons.clear, size: 20, color: buttonsColor ?? Colors.black),
       ),
       dropDownButton: Padding(
-        padding: arrowBtnPadding ??
-            const EdgeInsets.symmetric(horizontal: 5),
+        padding: arrowBtnPadding ?? const EdgeInsets.symmetric(horizontal: 5),
         child: Icon(Icons.arrow_drop_down,
             size: 24, color: buttonsColor ?? Colors.black),
       ),
       selectedItem: selectedItem,
       itemAsString: itemAsString,
       showSelectedItem: showSelectedItem,
-      style: WidgetUtils.textStyle.copyWith(
-          fontSize:
-          textSize ?? WidgetUtils.textStyle.fontSize),
-      itemStyle: WidgetUtils.textStyle.copyWith(
-          fontSize:
-          textSize ?? WidgetUtils.textStyle.fontSize),
+      style: WidgetUtils.textStyle
+          .copyWith(fontSize: textSize ?? WidgetUtils.textStyle.fontSize),
+      itemStyle: WidgetUtils.textStyle
+          .copyWith(fontSize: textSize ?? WidgetUtils.textStyle.fontSize),
       searchBoxStyle: WidgetUtils.textStyle,
       searchBoxDecoration: WidgetUtils.setInputDecoration(
           hint: searchHint ?? "بحث",
           enableColor: Colors.black,
-          padding:
-          EdgeInsets.symmetric(horizontal: 10, vertical: 10)),
+          padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10)),
       popupTitle: Container(
         height: 50,
         decoration: BoxDecoration(
@@ -114,26 +108,24 @@ class DropdownTextField<T> extends StatelessWidget {
         ),
         child: Center(
           child: MyText(
-            title:
-            label != null ? label! : hint??"",
+            title: label != null ? label! : hint ?? "",
             size: 16,
             color: Colors.white,
           ),
         ),
       ),
       dropdownSearchDecoration: WidgetUtils.setInputDecoration(
-          hintColor: hintColor,
-          label: label,
-          hint: hint,
-          fillColor: fillColor,
-          enableColor: enableColor,
-          radius: radius,
-          hintSize: labelSize,
-          prefixIcon: prefixIcon,
-          padding: contentPadding ?? EdgeInsets.symmetric(horizontal: 10, vertical: 12),
+        hintColor: hintColor,
+        label: label,
+        hint: hint,
+        fillColor: fillColor,
+        enableColor: enableColor,
+        radius: radius,
+        hintSize: labelSize,
+        prefixIcon: prefixIcon,
+        padding: contentPadding ??
+            EdgeInsets.symmetric(horizontal: 10, vertical: 12),
       ),
     );
   }
 }
-
-
