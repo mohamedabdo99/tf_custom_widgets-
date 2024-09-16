@@ -24,7 +24,7 @@ class _SearchFormFieldState extends State<SearchFormField> {
   final TextEditingController _searchController = TextEditingController();
   final FocusNode _focusNode = FocusNode();
 
-  final double _collapsedSearchFieldWidth = 124.w;
+  final double _collapsedSearchFieldWidth = 124;
   late double _expandSearchFieldWidth;
   bool _isSearchFieldExpand = false;
   final _keyboardVisibilityController = KeyboardVisibilityController();
