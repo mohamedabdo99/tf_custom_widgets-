@@ -73,7 +73,7 @@ class DropdownTextField<T> extends StatelessWidget {
       isFilteredOnline: false,
       maxHeight: 350,
       label: label,
-      // items: data,
+      items: data ?? [],
       onFind: onFind,
       validator: validate,
       onChanged: onChange,
